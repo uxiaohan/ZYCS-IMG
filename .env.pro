@@ -1,0 +1,1 @@
+VITE_IMG_API_URL = '/upload'
