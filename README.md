@@ -16,7 +16,7 @@ English | [简体中文](https://github.com/uxiaohan/ZYCS-IMG/blob/main/README_C
 
 ### Page
 
-![Sudden Rain and Heavy Mountains Image Hosting](https://img-cdn.4ce.cn/v2/2024/07/1721639712.png)
+![Sudden Rain and Heavy Mountains Image Hosting](https://uxiaohan.github.io/v2/2024/07/1721639712.png)
 
 [Click to experience Demo](https://wp-cdn.4ce.cn/)
 
@@ -30,10 +30,10 @@ English | [简体中文](https://github.com/uxiaohan/ZYCS-IMG/blob/main/README_C
 
 **Picture steps**
 
-![Sudden Rain and Heavy Mountains Picture Bed](https://img-cdn.4ce.cn/v2/2024/07/1721640641.png)
-![Sudden Rain and Heavy Mountains Picture Bed](https://img-cdn.4ce.cn/v2/2024/07/1721640649.png)
-![Sudden Rain and Heavy Mountains Picture Bed](https://img-cdn.4ce.cn/v2/2024/07/1721640656.png)
-{% endgallery %}
+![Sudden Rain and Heavy Mountains Picture Bed](https://uxiaohan.github.io/v2/2024/07/1721640641.png)
+![Sudden Rain and Heavy Mountains Picture Bed](https://uxiaohan.github.io/v2/2024/07/1721640649.png)
+![Sudden Rain and Heavy Mountains Picture Bed](https://uxiaohan.github.io/v2/2024/07/1721640656.png)
+
 
 ### Features
 

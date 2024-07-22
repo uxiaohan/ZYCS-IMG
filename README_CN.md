@@ -16,7 +16,7 @@
 
 ### 页面
 
-![骤雨重山图床](https://img-cdn.4ce.cn/v2/2024/07/1721639712.png)
+![骤雨重山图床](https://uxiaohan.github.io/v2/2024/07/1721639712.png)
 
 [点击体验Demo](https://wp-cdn.4ce.cn/)
 
@@ -30,10 +30,9 @@
 
 **图片步骤**
 
-![骤雨重山图床](https://img-cdn.4ce.cn/v2/2024/07/1721640641.png)
-![骤雨重山图床](https://img-cdn.4ce.cn/v2/2024/07/1721640649.png)
-![骤雨重山图床](https://img-cdn.4ce.cn/v2/2024/07/1721640656.png)
-{% endgallery %}
+![骤雨重山图床](https://uxiaohan.github.io/v2/2024/07/1721640641.png)
+![骤雨重山图床](https://uxiaohan.github.io/v2/2024/07/1721640649.png)
+![骤雨重山图床](https://uxiaohan.github.io/v2/2024/07/1721640656.png)
 
 ### 特点
 
