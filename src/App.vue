@@ -25,16 +25,24 @@
                 </a-space>
               </a-skeleton>
             </div>
-            <div class="vh_img_text" v-else>
-              <a-input :error="item.fileItem.response == 'Failed'" :default-value="item.fileItem.response" readonly
-                size="mini" @click="item.fileItem.response != 'Failed' && copyStr(item.fileItem.response)">
-                <template #append v-if="item.fileItem.response != 'Failed'">URL</template>
-              </a-input>
-              <a-input :error="item.fileItem.response == 'Failed'"
-                :default-value="`![${item.fileItem.name}](${item.fileItem.response})`" readonly size="mini"
-                @click="item.fileItem.response != 'Failed' && copyStr(`![${item.fileItem.name}](${item.fileItem.response})`)">
-                <template #append v-if="item.fileItem.response != 'Failed'">Markdown</template>
-              </a-input>
+            <div class="vh_img_text with_value" v-else>
+              <section>
+                <a-input :error="item.fileItem.response == 'Failed'" :default-value="item.fileItem.response" readonly
+                  size="mini" @click="item.fileItem.response != 'Failed' && copyStr(item.fileItem.response)">
+                  <template #append v-if="item.fileItem.response != 'Failed'">URL</template>
+                </a-input>
+                <a-input :error="item.fileItem.response == 'Failed'"
+                  :default-value="`![${item.fileItem.name}](${item.fileItem.response})`" readonly size="mini"
+                  @click="item.fileItem.response != 'Failed' && copyStr(`![${item.fileItem.name}](${item.fileItem.response})`)">
+                  <template #append v-if="item.fileItem.response != 'Failed'">Markdown</template>
+                </a-input>
+              </section>
+              <a-popover title="图片二维码">
+                <qrcode-vue class="qr" :value="item.fileItem.response" :size="56" level="H" />
+                <template #content>
+                  <qrcode-vue class="qr" :value="item.fileItem.response" :size="166" level="H" />
+                </template>
+              </a-popover>
             </div>
           </div>
         </template>
@@ -56,6 +64,7 @@
 <script setup lang="ts">
 import { nextTick } from 'vue'
 import { Message } from '@arco-design/web-vue'
+import QrcodeVue from 'qrcode.vue'
 const ACTION_API = import.meta.env.VITE_IMG_API_URL;
 
 

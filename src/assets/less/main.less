@@ -96,6 +96,24 @@
             width: 100%;
             height: 100%;
 
+            &.with_value {
+              flex-direction: row;
+              gap: 6.66px;
+
+              & > .qr {
+                width: 56px;
+                height: 56px;
+              }
+
+              & > section {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+              }
+            }
+
             .arco-input-wrapper {
               cursor: pointer;
 
