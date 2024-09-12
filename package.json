@@ -8,7 +8,9 @@
     "pre": "vite build --mode pro && npx wrangler pages dev ./",
     "build": "vite build --mode pro",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "pages:dev": "wrangler pages dev --compatibility-date=2023-08-11 --proxy 5173 -- npm run dev",
+    "pages:deploy": "npm run build && wrangler pages deploy ./dist"
   },
   "dependencies": {
     "qrcode.vue": "^3.4.1",
@@ -33,6 +35,7 @@
     "prettier": "^3.2.5",
     "typescript": "~5.4.0",
     "vite": "^5.3.1",
-    "vue-tsc": "^2.0.21"
+    "vue-tsc": "^2.0.21",
+    "wrangler": "^3.76.0"
   }
 }
