@@ -1,0 +1,203 @@
+.page_main {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  & > header {
+    margin: 16.66px auto;
+    width: 100%;
+    max-width: 1166px;
+    height: max-content;
+
+    & > .desc {
+      opacity: 0.88;
+    }
+  }
+
+  & > main {
+    flex: 1;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1166px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    :deep(.arco-upload-wrapper) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      & > .arco-upload {
+        box-sizing: border-box;
+        border: 1px dashed #000;
+        box-shadow: 0 0 1.25rem -0.36rem #9e9e9e33;
+
+        & > .arco-upload-drag {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 166px;
+          // background: rgba(255, 255, 255, 0.94);
+          background: rgba(255, 255, 255, 0.6);
+          border: none;
+        }
+      }
+
+      .arco-upload-list {
+        margin-top: 16px;
+        box-sizing: border-box;
+        padding-right: 6px;
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 99;
+
+        & > .vh-img-item {
+          margin-bottom: 16px;
+          box-sizing: border-box;
+          padding: 16px;
+          display: flex;
+          gap: 16px;
+          width: 100%;
+          height: 88px;
+          border-radius: 6px;
+          background: rgba(255, 255, 255, 0.94);
+
+          &:nth-last-of-type(1) {
+            margin-bottom: 0;
+          }
+
+          .vh_img_val {
+            width: 56px;
+            height: 56px;
+
+            & > img {
+              width: 100%;
+              height: 100%;
+              cursor: pointer;
+            }
+          }
+
+          & > .vh_img_text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+
+            &.with_value {
+              flex-direction: row;
+              gap: 6.66px;
+
+              & > .qr {
+                width: 56px;
+                height: 56px;
+              }
+
+              & > section {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .arco-input-wrapper {
+              cursor: pointer;
+
+              &:focus-within,
+              &.arco-input-focus {
+                border-color: #8888ff !important;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > footer {
+    box-sizing: border-box;
+    width: 100%;
+    height: max-content;
+
+    & > p {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      height: max-content;
+      overflow: hidden;
+
+      & > a {
+        width: max-content;
+        height: 20px;
+        overflow: hidden;
+
+        & > img {
+          height: 20px;
+          max-height: 20px;
+          width: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .page_main {
+    & > header {
+      margin: 0 auto 6px;
+
+      & > h1 {
+        font-size: 26px;
+      }
+
+      & > h2 {
+        font-size: 18px;
+      }
+
+      & > .desc {
+        & > p {
+          margin: 6px;
+          font-size: 12px;
+          opacity: 0.56;
+
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    & > main {
+      :deep(.arco-upload-wrapper) {
+        & > .arco-upload {
+          & > .arco-upload-drag {
+            height: 56px;
+          }
+        }
+
+        & > .arco-upload-list {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
