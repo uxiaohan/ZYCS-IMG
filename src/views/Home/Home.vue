@@ -29,12 +29,12 @@
     <Upload v-model="fileList" :UploadConfig="UploadConfig" :uploadAPI="uploadAPI" />
     <section v-show="fileList.length" class="vh-tools"><Button @click="fileList = []">清空</Button><Button @click="vh.CopyText(fileList.map((i: any) => i.upload_blob).join('\n'))">复制全部</Button></section>
     <!-- 展示 -->
-    <ResList v-model="fileList" :nodeHost="nodeHost" />
+    <ResList v-model="reversedFileList" :nodeHost="nodeHost" />
   </section>
 </template>
 <script setup lang="ts">
 import vh from 'vh-plugin';
-import { ref, watch } from 'vue';
+import { ref, watch, computed } from 'vue';
 import { formatURL } from '@/utils/index';
 import { Button } from '@/components/ui/button';
 import Upload from '@/components/Upload/Upload.vue';
@@ -67,6 +67,15 @@ watch(fileList, (newVal) => {
         }),
     ),
   );
+});
+
+const reversedFileList = computed({
+  get() {
+    return [...fileList.value].reverse();
+  },
+  set(newValue) {
+    fileList.value = [...newValue].reverse();
+  }
 });
 </script>
 
